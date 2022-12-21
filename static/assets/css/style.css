@@ -1,0 +1,21 @@
+#books {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#books img {
+  height: auto;
+  width: 200px;
+}
+
+#books .book-info {
+  padding: 1em;
+}
+
+#app .login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
