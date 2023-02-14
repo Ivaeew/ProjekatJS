@@ -1,0 +1,2 @@
+Projekat sadrži bazičnu funkcionalnost izlistavanje knjiga, uzima knjige koje su objekti iz baze podataka, koja u sebi ima linkove sa slikama, sadrži knjige, žanrove i autore, registracionu formu i logovanje, polja za čekiranje, asinhrone funkcionalnosti.
+Projekat obuhvata MYSQL baza podataka.

@@ -19,3 +19,20 @@
   align-items: center;
   justify-content: center;
 }
+@media screen and (max-width: 480px) {
+  .text {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .text {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .text {
+    font-size: 16px;
+  }
+}
+
+
