@@ -1,55 +1,49 @@
-const { connection } = require('../db/connection');
+const { connection } = require("../db/connection");
 
 const getAllAuthors = async () => {
-    const sql = 
-        `SELECT a.id,
+  const sql = `SELECT a.id,
                 a.ime AS name,
                 a.prezime AS surname
         FROM autor a;`;
-    
-    try {
-        const [rows, fields] = await connection
-            .promise()
-            .execute(sql);
 
-        if (rows.length === 0) {
-            return [];
-        }
+  try {
+    const [rows, fields] = await connection.promise().execute(sql);
 
-        return rows;
-    } catch(err) {
-        console.error(err);
-
-        return [];
+    if (rows.length === 0) {
+      return [];
     }
+
+    return rows;
+  } catch (err) {
+    console.error(err);
+
+    return [];
+  }
 };
 
-const getSingleAuthor = async id => {
-    const sql = 
-        `SELECT a.id,
+const getSingleAuthor = async (id) => {
+  const sql = `SELECT a.id,
                 a.ime AS name,
                 a.prezime AS surname
         FROM autor a
         WHERE a.id = ?;`;
 
-    try {
-        const [rows, fields] = await connection
-            .promise()
-            .execute(sql, [id]);
+  try {
+    const [rows, fields] = await connection.promise().execute(sql, [id]);
 
-        if (rows.length === 0) {
-            return null;
-        }
+    if (rows.length === 0) {
+      return null;
+    }
 
-        return rows[0];
-    } catch(err) {
-        console.error(err);
+    return rows[0];
+  } catch (err) {
+    console.error(err);
 
-        return null;
-    }  
+    return null;
+  }
 };
 
 module.exports = {
-    getAllAuthors,
-    getSingleAuthor,
+  getAllAuthors,
+  getSingleAuthor,
 };
